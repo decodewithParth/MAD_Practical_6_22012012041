@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var playAudio:FloatingActionButton=findViewById<FloatingActionButton>(R.id.play);
+        playAudio.setOnClickListener { startActivity(Intent.ACTION_VIEW).also { this.play()} }
         var shuffleAudio:FloatingActionButton=findViewById<FloatingActionButton>(R.id.shuffle);
         var pkipPrevious:FloatingActionButton=findViewById<FloatingActionButton>(R.id.previous);
         var skipNext:FloatingActionButton=findViewById<FloatingActionButton>(R.id.next);
@@ -21,8 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun play(){
-        var mp=MediaPlayer();
-        mp.setDataSource(song.mp3);
+        var mp=MediaPlayer.create(this,R.raw.song);
         mp.prepare();
         mp.start()
     }
