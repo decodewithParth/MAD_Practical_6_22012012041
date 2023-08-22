@@ -65,21 +65,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_shuffle_24"
+                android:tintMode="@color/white"
+                android:backgroundTint="#675F5F"
                 app:fabCustomSize="45dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="70dp"
-                android:layout_marginLeft="15dp" />
+                android:layout_marginTop="82dp"
+                android:layout_marginLeft="23dp" />
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/previous"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_skip_previous_24"
-                app:fabSize="mini"
+                app:fabCustomSize="55dp"
+                android:tintMode="@color/white"
+                android:backgroundTint="#675F5F"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="78dp"
+                android:layout_marginLeft="81dp" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tintMode="@color/white"
+                android:backgroundTint="#771919"
+                android:src="@drawable/baseline_play_arrow_24"
+                app:fabCustomSize="70dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="70dp"
-                android:layout_marginLeft="70dp" />
+                android:layout_marginLeft="148dp"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tintMode="@color/white"
+                android:backgroundTint="#675F5F"
+                android:src="@drawable/baseline_skip_next_24"
+                app:fabCustomSize="55dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="78dp"
+                android:layout_marginLeft="232dp" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tintMode="@color/white"
+                android:backgroundTint="#675F5F"
+                android:src="@drawable/baseline_stop_24"
+                app:fabCustomSize="45dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="82dp"
+                android:layout_marginLeft="298dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
