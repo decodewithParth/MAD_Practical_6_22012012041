@@ -9,14 +9,29 @@ import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
+
+    var flag=0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var playAudio:FloatingActionButton=findViewById<FloatingActionButton>(R.id.play);
-        playAudio.setOnClickListener { play() }
+        playAudio.setOnClickListener { play();
+            val b:FloatingActionButton=findViewById<FloatingActionButton>(R.id.play);
+        if(flag==0){
+            b.setImageResource(R.drawable.baseline_pause_24);
+            flag=1;
+        }
+            else
+        {
+            b.setImageResource(R.drawable.baseline_play_arrow_24);
+            flag=0;
+        }
+
+        }
         var stopAudio:FloatingActionButton=findViewById<FloatingActionButton>(R.id.stop);
         stopAudio.setOnClickListener { stop() };
+        val b:FloatingActionButton=playAudio;
     }
 
     fun play(){
